@@ -12,7 +12,7 @@ export class BookService {
     return await this.bookRepository.create(title);
   }
 
-  async find(id: string): Promise<Book | null> {
+  async findById(id: string): Promise<Book | null> {
     return await this.bookRepository.findById(id);
   }
 }
