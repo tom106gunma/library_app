@@ -23,7 +23,7 @@ export class BookController {
 
   async findById(req: Request, res: Response): Promise<void> {
     try {
-      const id = req.body.id as string;
+      const id = req.params.id as string;
       const book = await this.bookService.findById(id);
       if(book) {
         res.status(200).json(book);
